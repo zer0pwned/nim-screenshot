@@ -1,8 +1,11 @@
+import screenshot/common
+export common
+
 when defined(macosx):
-  import screenshot_darwin
+  import screenshot/screenshot_darwin
 
 when defined(windows):
-  import screenshot_windows
+  import screenshot/screenshot_windows
 
 template numActiveDisplays*(): untyped =
   var number: int
