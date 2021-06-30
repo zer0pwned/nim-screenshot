@@ -4,7 +4,7 @@ version       = "0.1.0"
 author        = "zer0pwned"
 description   = "nim library to capture desktop screen."
 license       = "Apache-2.0"
-srcDir        = "screenshot"
+srcDir        = "src"
 
 
 # Dependencies
