@@ -1,6 +1,5 @@
 ## nim-screenshot 
 
----
 
 * Nim library to capture desktop screen.
 * Support Windows, Mac for now. PRs welcome for other platforms.
@@ -13,7 +12,6 @@
   migrate it into our package in the future. 
 
 ## Example 
----
 
 ```nim
 ## Take screenshots for all monitors and merge into one png file
@@ -44,7 +42,6 @@ for i in 0..<nDisplays:
 ```
 
 ## Notes
----
 
 * To use this library on Mac, you should enable two frameworks during
   compilation. For instance, pass `-framework CoreGraphics -framework
