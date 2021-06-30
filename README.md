@@ -1,5 +1,7 @@
-## nim-screenshot 
+nim-screenshot 
+==============
 
+[![](https://img.shields.io/github/license/zer0pwned/nim-screenshot)](https://github.com/zer0pwned/nim-screenshot/blob/main/LICENSE)
 
 * Nim library to capture desktop screen.
 * Support Windows, Mac for now. PRs welcome for other platforms.
@@ -11,7 +13,8 @@
   from NIM X11 package demonstrated how to make screenshot. Will consider to
   migrate it into our package in the future. 
 
-## Example 
+Example 
+=======
 
 ```nim
 ## Take screenshots for all monitors and merge into one png file
@@ -41,7 +44,8 @@ for i in 0..<nDisplays:
   s.close()
 ```
 
-## Notes
+Notes
+=====
 
 * To use this library on Mac, you should enable two frameworks during
   compilation. For instance, pass `-framework CoreGraphics -framework
