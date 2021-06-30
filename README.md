@@ -50,3 +50,10 @@ Notes
 * To use this library on Mac, you should enable two frameworks during
   compilation. For instance, pass `-framework CoreGraphics -framework
   CoreFoundation` for your clang linker. See `screenshot.nims` as reference.
+* The raw RGB data we retrieved from operating system normally is reversed, so
+  we have to perform byte swap when finalizing the PNG data. But this procedure
+  can be slow at debug mode. My Macbook Pro generally takes 3 seconds for one
+  PNG file but once you enable the release mode, it can be really fast. (On
+  Windows, the debug mode is not that slow though.)
+* You need allow your program to have screen recording privilege if your Mac has
+  privacy control enabled. 
