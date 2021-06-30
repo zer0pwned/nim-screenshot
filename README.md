@@ -21,24 +21,24 @@ Example
 import screenshot
 import streams
 import nimPNG
-let nDisplays = numActiveDisplaysImplWindows().int
+let nDisplays = numActiveDisplays().int
 var 
   height, width: int
 
 for i in 0..<nDisplays:
-  let rect = getDisplayBoundsImplWindows(i) 
+  let rect = getDisplayBounds(i) 
   if (rect.max.y - rect.min.y) > height:
     height = rect.max.y - rect.min.y
   width += (rect.max.x - rect.min.x)
 
-let buffer = captureImplWindows(0, 0, width, height)
+let buffer = capture(0, 0, width, height)
 var s = newFileStream("screenshot_all.png", fmWrite)
 buffer.writeChunks s
 s.close()
 
 ## Take screenshot for each monitor
 for i in 0..<nDisplays:
-  let buffer = captureScreenImplWindows(i)
+  let buffer = captureScreen(i)
   var s = newFileStream("screenshot_" & $i & ".png", fmWrite)
   buffer.writeChunks s
   s.close()

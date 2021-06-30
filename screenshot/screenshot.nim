@@ -7,7 +7,7 @@ when defined(windows):
 template numActiveDisplays*(): untyped =
   var number: int
   when defined(macosx):
-    number = numActiveDisplaysImplDarwin()
+    number = numActiveDisplaysImplDarwin().int
   elif defined(windows):
     number = numActiveDisplaysImplWindows()
   else:

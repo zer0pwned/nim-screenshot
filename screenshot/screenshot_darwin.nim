@@ -1,5 +1,4 @@
 import nimPNG
-import streams
 import ./common
 
 type 
@@ -267,6 +266,7 @@ proc captureAllScreensDarwin*(): seq[PNG[seq[byte]]] =
 
 when isMainModule:
   import times
+  import streams
   let nDisplays = numActiveDisplaysImplDarwin().int
   var 
     height, width: int
